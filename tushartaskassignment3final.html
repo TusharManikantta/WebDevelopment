@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res.css">
     <title>Document</title>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <style>
-    body{
+    body {
         color: beige;
         /* background:url(https://images8.alphacoders.com/126/1262275.png); */
         /* background:url(dining\ image.jpg) ; */
         background-image: url(https://d1tm14lrsghf7q.cloudfront.net/media/files/rtf/2020_04_FRAME/BestUseofColour_3.jpg);
-        
+
         background-size: cover;
         background-repeat: no-repeat;
         /* background-attachment: fixed;
@@ -21,101 +23,121 @@
         font-size: 23px;
         /* text-align: center; */
         font-family: 'Alkatra', cursive;
-         /* font-family: 'Roboto', sans-serif; */
+        /* font-family: 'Roboto', sans-serif; */
     }
-    .customizeit{
+
+    .customizeit {
         border: 2px solid white;
         /* background-color: orange; */
+        /* width: 40%; */
         padding: 3px 10px 30px 10px;
-        margin: 10px 400px;
+        /* margin: 10px 400px; */
         border-radius: 10px;
     }
-    #submitit,#resetit{
-         border-radius: 4px ;
+
+    #submitit,
+    #resetit {
+        border-radius: 4px;
         font-size: 15px;
         padding: 6px;
         margin: 2px;
         cursor: pointer;
-        
+
     }
-    input,option,select{
-        color:beige;
+
+    input,
+    option,
+    select {
+        color: beige;
         background-color: rgb(34, 31, 31);
     }
-    
+
     /* .divelement{
         border: 2px solid red;
     } */
-     h2{
+    h2 {
         text-align: center;
-     }
-     #thisiscustomer,#thisisdate,#thisistime,#thisisguests,#thisisnumber,#thisislocation{
-    
+    }
+
+    #thisiscustomer,
+    #thisisdate,
+    #thisistime,
+    #thisisguests,
+    #thisisnumber,
+    #thisislocation {
+
         margin: 10px 10px 10px 55px;
-     }
-     #registration{
+    }
+
+    #registration {
         color: bisque;
-     }
-     #hover{
+    }
+
+    #hover {
         color: beige;
-     }
-    #hover:hover{
+    }
+
+    #hover:hover {
         color: greenyellow;
         /* cursor: pointer; */
     }
-    
-     
 </style>
 
 <body>
-    
+
     <h2 id="registration">Restaurant Registration Form</h2>
-    <div class="customizeit">
-        <h2 id="hover" >Eat Fresh-Eat Healthy</h2>
-        <form action="backend.php">
+    <center>
+        <div class="customizeit">
+            <h2 id="hover">Eat Fresh-Eat Healthy</h2>
+            <center>
+                <form action="backend.php">
+    
+                    <div class="divelement" id="thisiscustomer">
+                        <label for="customer">Customer Name:</label>
+                        <br><input type="text" name="customer" id="customer">
+                    </div>
+                    <br>
+                    <div class="divelement" id="thisisdate">
         
-    <div class="divelement" id="thisiscustomer" >
-        <label for="customer">Customer Name:</label>
-        <br><input type="text" name="customer" id="customer" >
-    </div>
-    <br>
-    <div class="divelement" id="thisisdate">
-        
-        <label for="Date">Date Of Reservation:</label>
-        <br><input type="date" name="DateandTime" id="Date">
-    </div>
-    <br>
-    <div class="divelement" id="thisistime">
-        <label for="time">Enter the Time:</label>
-          <br>  <input type="time" name ="time" id="time" >
-    </div>
-    <br>
-    <div class="divelement" id="thisisguests">
-        <label for="guests"> Enter the no. of Guests:</label>
-        <br> <input type="number" name="customers" id="guests">
-    </div>
-  <br>
-    <div class="divelement" id="thisisnumber">
-        <label for="number">Contact Number:</label>
-       <br> <input type="number" name="number" id="number">
-    </div>
-    <br>
-    <div id="thisislocation">
-        <label for="location">Location: </label>
-    <br><select name="location" id="location">
-        <option value="thisisoption" selected>Hyderabad</option>
-        <option value="thisisoption">Chennai</option>
-        <option value="thisisoption">Bangalore</option>
-        <option value="thisisoption">Mumbai</option>
-    </select>
-</div>
-    <br>
-    <div style="text-align: center;">
-        <input type="submit" value="Submit now" id="submitit">
-        <input type="Reset" value="reset" id="resetit">
-    </div>
-   
-</div> 
-</form>
+                        <label for="Date">Date Of Reservation:</label>
+                        <br><input type="date" name="DateandTime" id="Date">
+                    </div>
+                    <br>
+                    <div class="divelement" id="thisistime">
+                        <label for="time">Enter the Time:</label>
+                        <br> <input type="time" name="time" id="time">
+                    </div>
+                    <br>
+                    <div class="divelement" id="thisisguests">
+                        <label for="guests"> Enter the no. of Guests:</label>
+                        <br> <input type="number" name="customers" id="guests">
+                    </div>
+                    <br>
+                    <div class="divelement" id="thisisnumber">
+                        <label for="number">Contact Number:</label>
+                        <br> <input type="number" name="number" id="number">
+                    </div>
+                    <br>
+                    <div id="thisislocation">
+                        <label for="location">Location: </label>
+                        <br><select name="location" id="location">
+                            <option value="thisisoption" selected>Hyderabad</option>
+                            <option value="thisisoption">Chennai</option>
+                            <option value="thisisoption">Bangalore</option>
+                            <option value="thisisoption">Mumbai</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
+                        <input type="submit" value="Submit now" id="submitit">
+                        <input type="Reset" value="reset" id="resetit">
+                    </div>
+                </form>
+            </center>
+            
+        </div>
+    </center>
+    
 </body>
+
 </html>
