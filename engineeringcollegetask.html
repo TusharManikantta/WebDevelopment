@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering College</title>
+</head>
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+<style>
+    body{
+        /* font-family: 'Josefin Sans', sans-serif; */
+        font-family: 'DynaPuff', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        /* background: url(https://aec.edu.in/Campus_Buildings/Billgates.png); */
+        background-repeat: none;
+        background-size: cover;
+        
+      
+    }
+    header::before{
+        /* background: url(https://aec.edu.in/Campus_Buildings/Billgates.png); */
+        background: url(https://www.cbit.ac.in/wp-content/uploads/2019/01/CBIT.jpg);
+        content: "";
+        position: absolute;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+
+    }
+    .left{
+          display: inline-block;
+          /* background-color: aliceblue; */
+          /* border: 2px solid rgb(217, 236, 14); */
+          position: absolute;
+          top: 20px;
+          text-align: center;
+          left: 28px ;
+                 
+    }
+
+    .left img{
+        width: 90px;
+    }
+    .mid{
+          display: block;
+          /* border: 2px solid rgb(217, 236, 14); */
+           width:38%;
+           margin:  20px auto;
+        position: relative;
+           top: 18px;
+          
+          /* margin: 5px auto; */
+    }
+    .right{
+            display: inline-block;
+            position: absolute;
+            top:30px;
+            left: 1000px;
+            /* border: 2px solid rgb(217, 236, 14); */
+            padding: 12px 6px;
+    }
+     .btn{
+        background-color: black;
+        color: white;
+        margin: 0px 2px;
+        padding: 2px 4px;
+        cursor: pointer;
+        border: 2px solid grey;
+        border-radius: 8px;
+        font-size: 15px;
+        /* font-family: 'Josefin Sans', sans-serif; */
+        font-family: 'DynaPuff', cursive;
+    }
+    .btn:hover{
+        background-color: grey;
+    }
+   
+    .navbar li {
+            display: inline-block;
+            font-size: 22px;
+    }
+    .navbar li a{
+        color: black;
+        text-decoration: none;
+        padding: 5px 5px;
+        
+    }
+    .navbar li a:hover, a.active{
+        color: rgb(210, 57, 57);
+        text-decoration: underline;
+        padding: 5px 5px;
+    }
+    .container{
+        border: 2px solid black;
+        /* background-color: white; */
+        margin: 123px 116px;
+        padding: 36px 33px;
+        width: 33%;
+        border-radius: 20px;
+    }
+    .form-group input{
+        font-family: 'DynaPuff', cursive;
+        text-align: center;
+        border: 2px solid black;
+        display: block;
+        width: 344px;
+        margin: 6px auto;
+        padding: 5px;
+        border-radius: 8px;
+    }
+    .container{
+        text-align: center;
+    }
+    .container .btn{
+        padding: 6px 136px;
+    }
+    .dropbtn {
+  background-color: #556b7a;
+  color:black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+           <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Chaitanya_Bharathi_Institute_of_Technology_logo.png" alt="">
+           <!-- <div style="color: black;">Engineering College</div> -->
+        </div>
+          <!-- mid box for navbar -->
+        <div class="mid">
+             <ul class="navbar">
+                <li><a href="#">About Us</a></li>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Department</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#home">CSE</a>
+                      <a href="#about">Mechanical</a>
+                      <a href="#contact">Information Technology</a>
+                      <a href="#contact">Biotech</a>
+                      <a href="#contact">Civil Engineering</a>
+                      <a href="#contact">ECE</a>
+                    </div>
+                  </div>
+                <li><a href="#">Faculty</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Placement</a></li>
+             </ul>
+        </div>
+               <!-- right box for buttons -->
+        <div class="right">
+              <button class="btn">Call us now</button>
+              <button class="btn">Email us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1 style="color: black;">Join the best Engineering College in Hyd now</h1>
+        <form action="backend.php">
+            <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+            <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Phone Number">
+            </div>
+            <button class="btn">Submit now</button>
+        </form>
+    </div>
+    
+      
+      <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
+</body>
+</html>
