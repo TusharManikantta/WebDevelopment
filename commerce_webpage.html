@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering College</title>
+</head>
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+<style>
+    body {
+        /* font-family: 'Josefin Sans', sans-serif; */
+        font-family: 'DynaPuff', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        
+        background-repeat: none;
+        background-size: cover;
+    }
+
+    header::before {
+        
+        background: url(https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=1380&t=st=1683570753~exp=1683571353~hmac=516ddf1fde7906e9d06f9f4574730062f3726f299ee6c51cacd24022c976bfa6);
+        content: "";
+        position: absolute;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+    }
+
+    .left {
+        display: inline-block;
+        /* background-color: aliceblue; */
+        /* border: 2px solid rgb(217, 236, 14); */
+        position: absolute;
+        top: 20px;
+        text-align: center;
+        left: 28px;
+    }
+
+    .left img {
+        width: 90px;
+        top: 15px;
+        position: absolute;
+    }
+
+    .mid {
+        display: block;
+        /* border: 2px solid rgb(217, 236, 14); */
+        width: 38%;
+        margin: 20px auto;
+        position: relative;
+        top: 18px;
+        /* margin: 5px auto; */
+    }
+
+    .right {
+        display: inline-block;
+        position: absolute;
+        top: 33px;
+        left: 1296px;
+        /* border: 2px solid rgb(217, 236, 14); */
+        padding: 12px 6px;
+    }
+
+    .btn {
+        background-color: black;
+        color: white;
+        margin: 0px 2px;
+        padding: 2px 4px;
+        cursor: pointer;
+        border: 2px solid grey;
+        border-radius: 8px;
+        font-size: 15px;
+        /* font-family: 'Josefin Sans', sans-serif; */
+        font-family: 'DynaPuff', cursive;
+    }
+
+    .btn:hover {
+        background-color: grey;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 22px;
+    }
+
+    .navbar li a {
+        color: black;
+        text-decoration: none;
+        padding: 5px 5px;
+    }
+
+    .navbar li a:hover,
+    a.active {
+        color: rgb(210, 57, 57);
+        text-decoration: underline;
+        padding: 5px 5px;
+    }
+
+    .container {
+        border: 2px solid black;
+        /* background-color: white; */
+        margin: 123px 116px;
+        padding: 36px 33px;
+        width: 33%;
+        border-radius: 20px;
+    }
+
+    .form-group input {
+        font-family: 'DynaPuff', cursive;
+        text-align: center;
+        border: 2px solid black;
+        display: block;
+        width: 344px;
+        margin: 6px auto;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .container .btn {
+        padding: 6px 136px;
+    }
+
+    .dropbtn {
+        background-color: #bdcdd7;
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: #2980B9;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="https://img.favpng.com/16/3/16/computer-icons-shopping-cart-online-shopping-png-favpng-vrKhvGKSiQxuYu10LeiVYHbUU_t.jpg"
+                alt="">
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Electronics</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <!-- <a href="#home">Apple</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctiona()" class="dropbtn">Apple</button>
+                            <div id="myDropdowna" class="dropdown-content">
+                                <a href="#home">Airpods</a>
+                                <a href="#about">AirmaxPro</a>
+                                <a href="#contact">Ipad</a>
+                                <a href="#contact">Iphone</a>
+                                <a href="#contact">Watch</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#about">Sony</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionb()" class="dropbtn">Sony</button>
+                            <div id="myDropdownb" class="dropdown-content">
+                                <a href="#home">Camera</a>
+                                <a href="#about">Laptop</a>
+                                <a href="#contact">Mobile</a>
+                                <a href="#contact">Watch</a>
+                                <a href="#contact">Headphones</a>
+        
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">L.G</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionc()" class="dropbtn">L.G</button>
+                            <div id="myDropdownc" class="dropdown-content">
+                                <a href="#home">Refrigerator</a>
+                                <a href="#about">Air Conditioner</a>
+                                <a href="#contact">Washing Machine</a>
+                                <a href="#contact">Fan</a>
+                                <a href="#contact">Exhaust</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">Bose</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctiond()" class="dropbtn">Bose</button>
+                            <div id="myDropdownd" class="dropdown-content">
+                                <a href="#home">Headphones</a>
+                                <a href="#about">Speakers</a>
+                                <a href="#contact">Watch</a>
+                                <a href="#contact">Soundbar</a>
+                                <a href="#contact">Refrigerator</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">Skull Candy</a> -->
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="myFunction1()" class="dropbtn">Footwear</button>
+                    <div id="myDropdown1" class="dropdown-content">
+                        <div class="dropdown">
+                            <button onclick="myFunctiona1()" class="dropbtn">Adidas</button>
+                            <div id="myDropdowna1" class="dropdown-content">
+                                <a href="#home">Studs</a>
+                                <a href="#about">Shoes</a>
+                                <a href="#contact">Slides</a>
+                                <a href="#contact">Socks</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#about">Sony</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionb1()" class="dropbtn">Nike</button>
+                            <div id="myDropdownb1" class="dropdown-content">
+                                <a href="#home">Studs</a>
+                                <a href="#about">Shoes</a>
+                                <a href="#contact">Slides</a>
+                                <a href="#contact">Socks</a>
+        
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">L.G</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionc1()" class="dropbtn">Puma</button>
+                            <div id="myDropdownc1" class="dropdown-content">
+                                <a href="#home">Studs</a>
+                                <a href="#about">Shoes</a>
+                                <a href="#contact">Slides</a>
+                                <a href="#contact">Socks</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">Bose</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctiond1()" class="dropbtn">Rebook</button>
+                            <div id="myDropdownd1" class="dropdown-content">
+                                <a href="#home">Studs</a>
+                                <a href="#about">Shoes</a>
+                                <a href="#contact">Slides</a>
+                                <a href="#contact">Socks</a>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="myFunction2()" class="dropbtn">Clothing</button>
+                    <div id="myDropdown2" class="dropdown-content">
+                        <div class="dropdown">
+                            <button onclick="myFunctiona2()" class="dropbtn">Peter England</button>
+                            <div id="myDropdowna2" class="dropdown-content">
+                                <a href="#home">Shirts</a>
+                                <a href="#about">Pants</a>
+                                <a href="#contact">Trousers</a>
+                                <a href="#contact">Hoodies</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#about">Sony</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionb2()" class="dropbtn">Levi's</button>
+                            <div id="myDropdownb2" class="dropdown-content">
+                                <a href="#home">Shirts</a>
+                                <a href="#about">Pants</a>
+                                <a href="#contact">Trousers</a>
+                                <a href="#contact">Hoodies</a>
+        
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">L.G</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionc2()" class="dropbtn">Gucci</button>
+                            <div id="myDropdownc2" class="dropdown-content">
+                                <a href="#home">Shirts</a>
+                                <a href="#about">Pants</a>
+                                <a href="#contact">Trousers</a>
+                                <a href="#contact">Hoodies</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">Bose</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctiond2()" class="dropbtn">Zara</button>
+                            <div id="myDropdownd2" class="dropdown-content">
+                                <a href="#home">Shirts</a>
+                                <a href="#about">Pants</a>
+                                <a href="#contact">Trousers</a>
+                                <a href="#contact">Hoodies</a>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="myFunction3()" class="dropbtn">Furniture</button>
+                    <div id="myDropdown3" class="dropdown-content">
+                        <div class="dropdown">
+                            <button onclick="myFunctiona3()" class="dropbtn">IKEA</button>
+                            <div id="myDropdowna3" class="dropdown-content">
+                                <a href="#home">Sofa</a>
+                                <a href="#about">Chairs</a>
+                                <a href="#contact">Table</a>
+                                <a href="#contact">Drawer</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#about">Sony</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionb3()" class="dropbtn">Herman Miller</button>
+                            <div id="myDropdownb3" class="dropdown-content">
+                                <a href="#home">Sofa</a>
+                                <a href="#about">Chairs</a>
+                                <a href="#contact">Table</a>
+                                <a href="#contact">Drawer</a>
+        
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">L.G</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctionc3()" class="dropbtn">Bernhardt</button>
+                            <div id="myDropdownc3" class="dropdown-content">
+                                <a href="#home">Sofa</a>
+                                <a href="#about">Chairs</a>
+                                <a href="#contact">Table</a>
+                                <a href="#contact">Drawer</a>
+                            </div>
+                            </div>
+                        <!-- <a href="#contact">Bose</a> -->
+                        <div class="dropdown">
+                            <button onclick="myFunctiond3()" class="dropbtn">Steelcase</button>
+                            <div id="myDropdownd3" class="dropdown-content">
+                                <a href="#home">Sofa</a>
+                                <a href="#about">Chairs</a>
+                                <a href="#contact">Table</a>
+                                <a href="#contact">Drawer</a>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <button class="btn">Call us now</button>
+            <button class="btn">Email us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1 style="color: black;">Welcome To ShopKart</h1>
+        <form action="backend.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number">
+            </div>
+            <button class="btn">Submit now</button>
+        </form>
+    </div>
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunction1() {
+            document.getElementById("myDropdown1").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunction2() {
+            document.getElementById("myDropdown2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunction3() {
+            document.getElementById("myDropdown3").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiona() {
+            document.getElementById("myDropdowna").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionb() {
+            document.getElementById("myDropdownb").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionc() {
+            document.getElementById("myDropdownc").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiond() {
+            document.getElementById("myDropdownd").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiona1() {
+            document.getElementById("myDropdowna1").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionb1() {
+            document.getElementById("myDropdownb1").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionc1() {
+            document.getElementById("myDropdownc1").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiond1() {
+            document.getElementById("myDropdownd1").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiona2() {
+            document.getElementById("myDropdowna2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionb2() {
+            document.getElementById("myDropdownb2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionc2() {
+            document.getElementById("myDropdownc2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiond2() {
+            document.getElementById("myDropdownd2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiona3() {
+            document.getElementById("myDropdowna2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionb3() {
+            document.getElementById("myDropdownb2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctionc3() {
+            document.getElementById("myDropdownc2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function myFunctiond3() {
+            document.getElementById("myDropdownd2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
